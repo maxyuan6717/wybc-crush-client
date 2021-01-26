@@ -7,8 +7,8 @@ import AsyncSelect from "react-select/async";
 import { fetchStudents } from "../util/api";
 import { SET_VAL } from "../redux/masterReducer";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { Base } from "../util/base";
+import { StyledLink, StyledSelect } from "../components/StyledComponents";
 
 const Landing = () => {
   const dispatch = useDispatch();
@@ -79,7 +79,7 @@ const Landing = () => {
               "loading..."
             ) : stateVal.author_netId ? (
               <div style={{ width: "400px" }}>
-                <AsyncSelect
+                <StyledSelect
                   loadOptions={loadOptions}
                   placeholder="Type in a recipient's name..."
                   autoFocus
@@ -93,7 +93,25 @@ const Landing = () => {
                         }
                       : null
                   }
+                  styles={{
+                    option: (base, { isDisabled, isFocused, isSelected }) => ({
+                      ...base,
+                      cursor: "pointer",
+                      backgroundColor: isDisabled
+                        ? undefined
+                        : isSelected
+                        ? "#e66a6a"
+                        : isFocused
+                        ? "#a64c4c"
+                        : undefined,
+                      ":active": {
+                        ...base[":active"],
+                        backgroundColor: !isDisabled && "#e66a6a",
+                      },
+                    }),
+                  }}
                 />
+                <StyledLink to="/write">Continue</StyledLink>
               </div>
             ) : (
               <div
