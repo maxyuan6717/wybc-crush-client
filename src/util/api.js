@@ -19,13 +19,6 @@ const createCard = async (
   data.append("recipient_name", recipient_name);
   data.append("recipient_email", recipient_email);
   data.append("message", message);
-  data.append("drawing", drawing);
-  if (audioFile) {
-    data.append("file", audioFile, "sample");
-  }
-  sticker.forEach((x) => {
-    data.append("sticker", x);
-  });
   data.append("author_netId", author_netId);
   axios.post(`${Base}/card/new`, data);
 };

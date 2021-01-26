@@ -14,12 +14,11 @@ const state = (
     isLoading: false,
     studentList: [],
     studentId: "none",
-    selectedStudent: null,
-    email: "",
+    recipient_name: null,
+    recipient_email: "",
     message: "",
-    author: "",
-    audioFile: null,
-    auth: -1,
+    author_name: "",
+    author_netId: -1,
   },
   action
 ) => {
