@@ -7,7 +7,7 @@ import logo from "../assets/wybc_logo.png";
 const Landing = () => {
   return (
     <Row className={styles.container + " mx-auto"}>
-      <Col xs={1} className={`${styles.title} ${styles.crush} pl-1`}>
+      <Col xs={1} className={`${styles.title} ${styles.crush} ml-1 p-0`}>
         <Row className={`mx-auto justify-content-center mt-4 ${styles.logo}`}>
           <a href="https://wybc.com/">
             <img
