@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Fade } from "react-bootstrap";
 import styles from "./Landing.module.css";
 import heart from "../assets/pixel_heart.png";
 import logo from "../assets/wybc_logo.png";
-import AsyncSelect from "react-select/async";
 import { fetchStudents } from "../util/api";
 import { SET_VAL } from "../redux/masterReducer";
 import { useSelector, useDispatch } from "react-redux";
 import { Base } from "../util/base";
-import { StyledLink, StyledSelect } from "../components/StyledComponents";
+import { StyledSelect, StyledBtn } from "../components/StyledComponents";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ const Landing = () => {
       setLoadingState(1);
       dispatch(SET_VAL("isLoading", false));
     };
-    if (stateVal.auth_netId !== -1) onMount();
+    if (stateVal.author_netId !== -1) onMount();
   }, [dispatch, stateVal.author_netId]);
 
   const filterStudents = (inputValue) => {
@@ -78,49 +78,68 @@ const Landing = () => {
             {!loadingState ? (
               "loading..."
             ) : stateVal.author_netId ? (
-              <div style={{ width: "400px" }}>
-                <StyledSelect
-                  loadOptions={loadOptions}
-                  placeholder="Type in a recipient's name..."
-                  autoFocus
-                  onChange={onInputChange}
-                  isClearable={true}
-                  value={
-                    stateVal.recipient_email
-                      ? {
-                          value: stateVal.recipient_email,
-                          label: stateVal.recipient_name,
-                        }
-                      : null
-                  }
-                  styles={{
-                    option: (base, { isDisabled, isFocused, isSelected }) => ({
-                      ...base,
-                      cursor: "pointer",
-                      backgroundColor: isDisabled
-                        ? undefined
-                        : isSelected
-                        ? "#e66a6a"
-                        : isFocused
-                        ? "#a64c4c"
-                        : undefined,
-                      ":active": {
-                        ...base[":active"],
-                        backgroundColor: !isDisabled && "#e66a6a",
-                      },
-                    }),
-                  }}
-                />
-                <StyledLink to="/write">Continue</StyledLink>
-              </div>
+              <>
+                <Row className="mx-auto mb-3">
+                  <div style={{ width: "500px" }}>
+                    <StyledSelect
+                      loadOptions={loadOptions}
+                      placeholder="Type in a recipient's name..."
+                      autoFocus
+                      onChange={onInputChange}
+                      isClearable={true}
+                      value={
+                        stateVal.recipient_email
+                          ? {
+                              value: stateVal.recipient_email,
+                              label: stateVal.recipient_name,
+                            }
+                          : null
+                      }
+                      styles={{
+                        option: (
+                          base,
+                          { isDisabled, isFocused, isSelected }
+                        ) => ({
+                          ...base,
+                          cursor: "pointer",
+                          backgroundColor: isDisabled
+                            ? undefined
+                            : isSelected
+                            ? "#e66a6a"
+                            : isFocused
+                            ? "#a64c4c"
+                            : undefined,
+                          ":active": {
+                            ...base[":active"],
+                            backgroundColor: !isDisabled && "#e66a6a",
+                          },
+                        }),
+                      }}
+                    />
+                  </div>
+                </Row>
+
+                <Fade in={stateVal.recipient_email}>
+                  <Row
+                    className="mx-auto"
+                    style={{
+                      pointerEvents: stateVal.recipient_email ? null : "none",
+                    }}
+                  >
+                    <Link to="/write">
+                      <StyledBtn>Continue</StyledBtn>
+                    </Link>
+                  </Row>
+                </Fade>
+              </>
             ) : (
-              <div
+              <StyledBtn
                 onClick={() => {
                   window.location.href = `${Base}/auth/cas`;
                 }}
               >
                 Login with CAS
-              </div>
+              </StyledBtn>
             )}
           </div>
         </Row>
