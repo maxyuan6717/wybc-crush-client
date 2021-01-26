@@ -10,6 +10,7 @@ import Write from "./pages/Write";
 function App() {
   const dispatch = useDispatch();
   axios.defaults.withCredentials = true;
+  console.log(process.env.REACT_APP_BACKEND_URL);
 
   useEffect(() => {
     const onMount = async () => {
