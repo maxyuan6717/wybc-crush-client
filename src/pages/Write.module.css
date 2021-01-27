@@ -1,0 +1,11 @@
+.header {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.letter {
+  border: 1px solid white;
+  padding: 15px;
+  color: white;
+}

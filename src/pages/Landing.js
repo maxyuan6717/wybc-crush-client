@@ -95,7 +95,7 @@ const Landing = () => {
               >
                 <Link to="/write" style={{ width: "100%" }}>
                   <StyledBtn className="d-flex justify-content-center">
-                    Invite →
+                    Start Invite →
                   </StyledBtn>
                 </Link>
               </Row>
@@ -103,7 +103,7 @@ const Landing = () => {
           </>
         ) : (
           <StyledBtn
-            className="mt-3 d-flex justify-content-center"
+            className="mt-3"
             onClick={() => {
               window.location.href = `${Base}/auth/cas`;
             }}
