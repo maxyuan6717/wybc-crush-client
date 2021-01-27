@@ -36,7 +36,7 @@ export const select_styles = {
   }),
   valueContainer: (base) => ({
     ...base,
-    padding: "8px",
+    padding: "6px",
   }),
   indicatorSeparator: (base) => ({
     ...base,
@@ -60,10 +60,10 @@ export const select_styles = {
     backgroundColor: "black",
     boxShadow: "none",
     border: "none",
-    borderBottom: "3px solid white",
+    borderBottom: "2px solid white",
     ":hover": {
       border: "none",
-      borderBottom: "3px solid white",
+      borderBottom: "2px solid white",
     },
   }),
 };

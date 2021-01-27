@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledBtn = styled.div`
   border: 3px solid white;
-  padding: 12px;
+  padding: 6px;
   font-size: 20px;
   color: white;
   font-weight: 500;

@@ -80,15 +80,28 @@ const Landing = () => {
           />
         </Row>
       </Col>
-      <Col xs={10} className="p-0">
+      <Col xs={10} className="px-2">
         <Row className="mx-auto" style={{ height: "100%" }}>
-          <div className="m-auto">
+          <div
+            className="m-auto py-3"
+            style={{ width: "500px", maxWidth: "500px" }}
+          >
+            <Row className={`mx-auto ${styles.header}`}>HEADER TEXT</Row>
+            <Row className={`mx-auto my-2 ${styles.description}`}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Vestibulum lorem sed risus ultricies tristique nulla aliquet enim
+              tortor. In pellentesque massa placerat duis ultricies lacus sed.
+              Augue interdum velit euismod in pellentesque. Volutpat odio
+              facilisis mauris sit amet massa vitae tortor condimentum.
+            </Row>
+
             {!loadingState ? (
               "loading..."
             ) : stateVal.author_netId ? (
               <>
                 <Row className="mx-auto mb-3">
-                  <div style={{ width: "500px" }}>
+                  <div style={{ width: "100%" }}>
                     <AsyncSelect
                       loadOptions={loadOptions}
                       placeholder="Type in a recipient's name..."
@@ -107,7 +120,6 @@ const Landing = () => {
                     />
                   </div>
                 </Row>
-
                 <Fade in={stateVal.recipient_email}>
                   <Row
                     className="mx-auto"
@@ -115,14 +127,17 @@ const Landing = () => {
                       pointerEvents: stateVal.recipient_email ? null : "none",
                     }}
                   >
-                    <Link to="/write">
-                      <StyledBtn>Continue</StyledBtn>
+                    <Link to="/write" style={{ width: "100%" }}>
+                      <StyledBtn className="d-flex justify-content-center">
+                        Invite →
+                      </StyledBtn>
                     </Link>
                   </Row>
                 </Fade>
               </>
             ) : (
               <StyledBtn
+                className="mt-3 d-flex justify-content-center"
                 onClick={() => {
                   window.location.href = `${Base}/auth/cas`;
                 }}
