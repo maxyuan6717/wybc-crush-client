@@ -19,7 +19,7 @@ export const select_styles = {
     ...base,
     paddingTop: 0,
     marginTop: 0,
-    borderRadius: "8px",
+    borderRadius: "0px",
     backgroundColor: "#242424",
   }),
   singleValue: (base) => ({
@@ -61,6 +61,7 @@ export const select_styles = {
     boxShadow: "none",
     border: "none",
     borderBottom: "2px solid white",
+    borderRadius: "0px",
     ":hover": {
       border: "none",
       borderBottom: "2px solid white",

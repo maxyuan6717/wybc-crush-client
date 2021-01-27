@@ -70,7 +70,7 @@ const Landing = () => {
               <div style={{ width: "100%" }}>
                 <AsyncSelect
                   loadOptions={loadOptions}
-                  placeholder="Type in a recipient's name..."
+                  placeholder="Who are you asking?"
                   autoFocus
                   onChange={onInputChange}
                   isClearable={true}
