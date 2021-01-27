@@ -1,0 +1,25 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.logo {
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.title {
+  color: white;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.3;
+}
+
+.crush {
+  color: var(--pink);
+}
