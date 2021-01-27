@@ -70,7 +70,7 @@ const Landing = () => {
               <div style={{ width: "100%" }}>
                 <AsyncSelect
                   loadOptions={loadOptions}
-                  placeholder="Who are you asking?"
+                  placeholder="Who are you inviting?"
                   autoFocus
                   onChange={onInputChange}
                   isClearable={true}
@@ -86,7 +86,7 @@ const Landing = () => {
                 />
               </div>
             </Row>
-            <Fade in={stateVal.recipient_email}>
+            <Fade in={stateVal.recipient_email.length > 0}>
               <Row
                 className="mx-auto"
                 style={{

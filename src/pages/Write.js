@@ -5,6 +5,7 @@ import { Col, Row } from "react-bootstrap";
 import { StyledTextArea, StyledBtn } from "../components/StyledComponents";
 import styles from "./Write.module.css";
 import { Link } from "react-router-dom";
+import { createCard } from "../util/api";
 
 const Write = ({ history }) => {
   const dispatch = useDispatch();
@@ -14,6 +15,18 @@ const Write = ({ history }) => {
   if (!stateVal.recipient_email) {
     history.push("/");
   }
+
+  const sendLetter = async () => {
+    await createCard(
+      author,
+      stateVal.author_netId,
+      stateVal.recipient_name,
+      stateVal.recipient_email,
+      message
+    );
+    history.push("/done");
+  };
+
   return (
     <Row className="mx-auto" style={{ height: "100%" }}>
       <Col sm={6} className="d-flex flex-column">
@@ -65,9 +78,10 @@ const Write = ({ history }) => {
               {author.length === 0 ? "Anonymous ;)" : author}
             </Row>
           </div>
-          <Link to="/done" style={{ width: "100%" }}>
-            <StyledBtn className="mt-3 mb-4">Send Invite →</StyledBtn>
-          </Link>
+
+          <StyledBtn onClick={sendLetter} className="mt-3 mb-4">
+            Send Invite →
+          </StyledBtn>
         </div>
       </Col>
     </Row>

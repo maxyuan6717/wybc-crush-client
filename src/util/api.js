@@ -9,18 +9,13 @@ const createCard = async (
   recipient_email,
   message
 ) => {
-  const data = new FormData();
-  if (author_name === "") {
-    data.append("author_name", "anonymous");
-  } else {
-    data.append("author_name", author_name);
-  }
-
-  data.append("recipient_name", recipient_name);
-  data.append("recipient_email", recipient_email);
-  data.append("message", message);
-  data.append("author_netId", author_netId);
-  axios.post(`${Base}/card/new`, data);
+  axios.post(`${Base}/card/new`, {
+    author_name,
+    author_netId,
+    recipient_name,
+    recipient_email,
+    message,
+  });
 };
 
 //  Fetch single card
