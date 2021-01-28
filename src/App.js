@@ -8,6 +8,7 @@ import { casCheck } from "./util/api";
 import Landing from "./pages/Landing";
 import Write from "./pages/Write";
 import Done from "./pages/Done";
+import Letter from "./pages/Letter";
 import styles from "./App.module.css";
 import heart from "./assets/pixel_heart.png";
 import logo from "./assets/wybc_logo.png";
@@ -71,7 +72,8 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/write" component={Write} />
-            <Route path="/Done" component={Done} />
+            <Route path="/done" component={Done} />
+            <Route path="/letter/:id" component={Letter} />
             <Route path="/" component={Landing} />
           </Switch>
         </Router>
