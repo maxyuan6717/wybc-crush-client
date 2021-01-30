@@ -23,3 +23,12 @@
 .crush {
   color: var(--pink);
 }
+
+.crush_btn {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.crush_btn:hover {
+  background-color: white;
+}

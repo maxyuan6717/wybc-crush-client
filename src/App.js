@@ -50,23 +50,28 @@ function App() {
             />
           </a>
         </Row>
-        <Row className="mx-auto justify-content-center">C</Row>
-        <Row className="mx-auto justify-content-center">R</Row>
-        <Row className="mx-auto justify-content-center">U</Row>
-        <Row className="mx-auto justify-content-center">S</Row>
-        <Row className="mx-auto justify-content-center">H</Row>
-        <Row
-          className="mx-auto justify-content-center"
-          style={{ marginTop: "15px" }}
-        >
-          <img
-            src={heart}
-            width={35}
-            height={35}
-            className="mx-auto"
-            alt="heart"
-          />
-        </Row>
+        <Col className={styles.crush_btn + " px-0"}>
+          <a href="https://wybc-crush.live" style={{ color: "inherit" }}>
+            <Row className="mx-auto justify-content-center">C</Row>
+            <Row className="mx-auto justify-content-center">R</Row>
+            <Row className="mx-auto justify-content-center">U</Row>
+            <Row className="mx-auto justify-content-center">S</Row>
+            <Row className="mx-auto justify-content-center">H</Row>
+
+            <Row
+              className="mx-auto pb-3 justify-content-center"
+              style={{ marginTop: "15px" }}
+            >
+              <img
+                src={heart}
+                width={35}
+                height={35}
+                className="mx-auto"
+                alt="heart"
+              />
+            </Row>
+          </a>
+        </Col>
       </Col>
       <Col xs={10} className="px-2">
         <Router>
