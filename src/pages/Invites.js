@@ -23,7 +23,7 @@ const Invites = () => {
       <Row className="mx-auto mt-4">
         <div className="mx-auto" style={{ width: "500px", maxWidth: "500px" }}>
           <Row className="mx-auto">
-            <Link to="/">
+            <Link to="/" style={{ display: "block", width: "80px" }}>
               <StyledBtn style={{ fontSize: "12px" }}>← Back</StyledBtn>
             </Link>
           </Row>

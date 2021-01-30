@@ -32,7 +32,7 @@ const Write = ({ history }) => {
       <Col sm={6} className="d-flex flex-column">
         <div className="mt-5">
           <Link to="/" style={{ display: "block", width: "80px" }}>
-            <StyledBtn style={{ fontSize: "14px" }}>← Back</StyledBtn>
+            <StyledBtn style={{ fontSize: "12px" }}>← Back</StyledBtn>
           </Link>
           <Row className={`mx-auto mb-2 mt-4 ${styles.header}`}>Message:</Row>
           <Row className="mx-auto mb-4">
