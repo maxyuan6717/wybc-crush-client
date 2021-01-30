@@ -1,0 +1,6 @@
+.letter {
+  border: 1px solid white;
+  padding: 15px;
+  color: white;
+  max-width: 500px;
+}
