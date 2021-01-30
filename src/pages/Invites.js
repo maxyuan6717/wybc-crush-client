@@ -17,7 +17,7 @@ const Invites = () => {
     };
     onMount();
   }, [stateVal]);
-  console.log(userCards);
+
   return (
     <>
       <Row className="mx-auto mt-4">
