@@ -20,8 +20,6 @@ const Letter = ({ match }) => {
     onMount();
   }, [letterId]);
 
-  console.log(letterContent);
-
   return (
     <Row className="mx-auto" style={{ height: "100%" }}>
       {letterContent && (
