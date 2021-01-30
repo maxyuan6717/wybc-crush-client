@@ -52,6 +52,17 @@ const Landing = () => {
         className="m-auto py-3"
         style={{ width: "500px", maxWidth: "500px" }}
       >
+        {stateVal.studentId !== "none" && (
+          <Row className="mx-auto mb-4 justify-content-end">
+            <Link
+              to={`/invites/${stateVal.studentId}`}
+              className={styles.invites}
+            >
+              <StyledBtn style={{ fontSize: "12px" }}>My Invitations</StyledBtn>
+            </Link>
+          </Row>
+        )}
+
         <Row className={`mx-auto ${styles.header}`}>HEADER TEXT</Row>
         <Row className={`mx-auto my-2 ${styles.description}`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -9,6 +9,7 @@ import Landing from "./pages/Landing";
 import Write from "./pages/Write";
 import Done from "./pages/Done";
 import Letter from "./pages/Letter";
+import Invites from "./pages/Invites";
 import styles from "./App.module.css";
 import heart from "./assets/pixel_heart.png";
 import logo from "./assets/wybc_logo.png";
@@ -79,6 +80,7 @@ function App() {
             <Route exact path="/write" component={Write} />
             <Route path="/done" component={Done} />
             <Route path="/letter/:id" component={Letter} />
+            <Route path="/invites/:id" component={Invites} />
             <Route path="/" component={Landing} />
           </Switch>
         </Router>

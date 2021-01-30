@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { StyledBtn } from "../components/StyledComponents";
 import { fetchCard, setOpened } from "../util/api";
-import styles from "./Letter.module.css";
+import Invite from "../components/Invite";
 
 const Letter = ({ match }) => {
   const letterId = match.params.id;
@@ -24,30 +26,14 @@ const Letter = ({ match }) => {
     <Row className="mx-auto" style={{ height: "100%" }}>
       {letterContent && (
         <div className="mt-5 mx-auto">
-          <div className={styles.letter}>
-            <Row className="mx-auto">
-              Dear{" "}
-              {letterContent.recipient_name &&
-                letterContent.recipient_name.split(" ")[0]}
-              ,
-            </Row>
-            <Row className="mx-auto mt-4">
-              &emsp;DEFAULT MESSAGE. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.
-            </Row>
-            {letterContent.message.length > 0 && (
-              <Row className="mx-auto mt-4">&emsp;{letterContent.message}</Row>
-            )}
-            <Row className="mx-auto mt-4 justify-content-end">
-              &emsp;Sincerely,
-            </Row>
-            <Row className="mx-auto justify-content-end">
-              {letterContent.author_name.length === 0
-                ? "Anonymous ;)"
-                : letterContent.author_name}
-            </Row>
-          </div>
+          <Invite
+            recipient={letterContent.recipient_name}
+            message={letterContent.message}
+            author={letterContent.author_name}
+          />
+          <Link to="/">
+            <StyledBtn className="mt-4">← Homepage</StyledBtn>
+          </Link>
         </div>
       )}
     </Row>
