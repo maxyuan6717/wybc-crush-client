@@ -31,10 +31,11 @@ const Invites = () => {
       </Row>
       <Row className="mx-auto justify-content center">
         {userCards.map((invite, index) => (
-          <div
+          <Row
             className={`mt-4 mx-auto ${
               index === userCards.length - 1 ? "mb-4" : ""
             }`}
+            style={{ width: "100%" }}
           >
             <Invite
               key={index}
@@ -42,7 +43,7 @@ const Invites = () => {
               message={invite.message}
               author={invite.author_name}
             />
-          </div>
+          </Row>
         ))}
       </Row>
     </>

@@ -4,7 +4,7 @@ import styles from "./Invite.module.css";
 
 const Invite = ({ recipient, message, author }) => {
   return (
-    <div className={styles.invite}>
+    <div className={styles.invite + " mx-auto"}>
       <Row className="mx-auto">
         Dear {recipient && recipient.split(" ")[0]},
       </Row>
