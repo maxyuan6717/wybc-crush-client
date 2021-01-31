@@ -65,14 +65,15 @@ const Landing = () => {
           </Row>
         )}
 
-        <Row className={`mx-auto ${styles.header}`}>HEADER TEXT</Row>
+        <Row className={`mx-auto ${styles.header}`}>Love is in the Air</Row>
         <Row className={`mx-auto my-2 ${styles.description}`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum
-          lorem sed risus ultricies tristique nulla aliquet enim tortor. In
-          pellentesque massa placerat duis ultricies lacus sed. Augue interdum
-          velit euismod in pellentesque. Volutpat odio facilisis mauris sit amet
-          massa vitae tortor condimentum.
+          Can't stop thinking about that special someone? Too shy to reach out
+          to your friend crush? Is there someone you think should have won the
+          Sexiest WYBCx Member poll?
+          <br />
+          <br />
+          Now's your chance to let them know how you feel! Transgress your
+          stress with finesse and invite them to the WYBC Valentine's Day Show!
         </Row>
 
         {!loadingState ? (

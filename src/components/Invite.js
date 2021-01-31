@@ -9,14 +9,21 @@ const Invite = ({ recipient, message, author }) => {
         Dear {recipient && recipient.split(" ")[0]},
       </Row>
       <Row className="mx-auto mt-4">
-        &emsp;DEFAULT MESSAGE. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
+        Be mine at WYBCx Crush! We can listen to some knockout tunes and find
+        love in the breakout rooms!
       </Row>
-      {message.length > 0 && (
-        <Row className="mx-auto mt-4">&emsp;{message}</Row>
-      )}
-      <Row className="mx-auto mt-4 justify-content-end">&emsp;Sincerely,</Row>
+      <Row className="mx-auto mt-4">Date: 2/12 at 10:00pm EST</Row>
+      <Row className="mx-auto mt-1">
+        Artists: Archer Frodyma, Noelle Mercer, Surfliner
+      </Row>
+      <Row className="mx-auto mt-1">
+        FB Event:{" "}
+        <a className="ml-1" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          Link
+        </a>
+      </Row>
+      {message.length > 0 && <Row className="mx-auto mt-4">{message}</Row>}
+      <Row className="mx-auto mt-4 justify-content-end">Sincerely,</Row>
       <Row className="mx-auto justify-content-end">
         {author.length === 0 ? "Anonymous ;)" : author}
       </Row>
