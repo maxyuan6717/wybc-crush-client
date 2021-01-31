@@ -10,7 +10,7 @@ const createCard = async (
   message
 ) => {
   axios.post(`${Base}/card/new`, {
-    author_name,
+    author_name: author_name === "" ? "Anonymous ;)" : author_name,
     author_netId,
     recipient_name,
     recipient_email,
