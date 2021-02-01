@@ -68,12 +68,12 @@ const Landing = () => {
         <Row className={`mx-auto ${styles.header}`}>Love is in the Air</Row>
         <Row className={`mx-auto my-2 ${styles.description}`}>
           Can't stop thinking about that special someone? Too shy to reach out
-          to your friend crush? Is there someone you think should have won the
+          to your friend-crush? Is there someone you think should have won the
           Sexiest WYBCx Member poll?
           <br />
           <br />
           Now's your chance to let them know how you feel! Transgress your
-          stress with finesse and invite them to the WYBC Valentine's Day Show!
+          stress with finesse by inviting them to the WYBC Valentine's Day Show!
         </Row>
 
         {!loadingState ? (
