@@ -73,10 +73,7 @@ const Write = ({ history }) => {
             </Row>
             <Row className="mx-auto mt-1">
               FB Event:{" "}
-              <a
-                className="ml-1"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-              >
+              <a className="ml-1" href="https://fb.me/e/1ZqogxFuB">
                 Link
               </a>
             </Row>
