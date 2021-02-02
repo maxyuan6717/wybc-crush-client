@@ -78,7 +78,8 @@ const Landing = () => {
           <br />
           <br />
           Now's your chance to let them know how you feel! Transgress your
-          stress with finesse by inviting them to the WYBC Valentine's Day Show!
+          lovelorn stress with finesse by inviting them to the WYBC Valentine's
+          Day Show!
         </Row>
 
         {!loadingState ? (
