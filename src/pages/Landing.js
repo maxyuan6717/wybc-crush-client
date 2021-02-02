@@ -57,8 +57,13 @@ const Landing = () => {
             <Link
               to={`/invites/${stateVal.studentId}`}
               className={styles.invites}
+              style={{ width: window.innerWidth >= 768 ? null : "100%" }}
             >
-              <StyledBtn style={{ fontSize: "12px" }}>
+              <StyledBtn
+                style={{
+                  fontSize: "12px",
+                }}
+              >
                 &nbsp;&nbsp;My Invitations&nbsp;&nbsp;
               </StyledBtn>
             </Link>
