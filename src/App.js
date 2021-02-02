@@ -40,7 +40,7 @@ function App() {
   return (
     <>
       <div
-        className="mx-auto mb-2 d-block d-md-none justify-content-center"
+        className="mx-auto mb-2 mt-2 d-block d-md-none justify-content-center"
         style={{ width: "100vw" }}
       >
         <Row className="mx-auto">
