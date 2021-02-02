@@ -49,7 +49,7 @@ const Landing = () => {
   return (
     <Row className="mx-auto" style={{ height: "100%" }}>
       <div
-        className="m-auto py-3"
+        className={`${window.innerWidth >= 768 ? "m-auto" : "mx-auto"} py-3`}
         style={{ width: "500px", maxWidth: "500px" }}
       >
         {stateVal.studentId !== "none" && (
