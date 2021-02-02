@@ -39,7 +39,11 @@ function App() {
 
   return (
     <Row className={styles.container + " mx-auto"}>
-      <Col xs={1} className={`${styles.title} ${styles.crush} ml-1 p-0`}>
+      <Col xs={1} className="p-0 d-block d-md-none" />
+      <Col
+        xs={1}
+        className={`${styles.title} ${styles.crush} ml-1 p-0 d-none d-md-block`}
+      >
         <Row className={`mx-auto justify-content-center mt-4 ${styles.logo}`}>
           <a href="https://wybc.com/">
             <img
